@@ -9,6 +9,7 @@
   --white-text: #ffffff;
   --logo-color-dark: #000000;
   --accent-color: #2196f3;
+  --social-icons-grey: #AFB1B8
 }
 body {
   color: var(--main-text-color);
@@ -124,12 +125,17 @@ ul {
   color: var(--white-text);
 }
 .hero {
+  max-width: 1600px;
   margin: 0 auto;
   margin-left: auto;
   margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--background-color-dark-blue);
+  background-image: linear-gradient(to right, rgb(47, 48, 58,0.4), rgb(47, 48, 58,0.4)), url(../imeges/hero_opt.jpg);
+  /*background-color: var(--background-color-dark-blue);*/
+  background-size: cover;
+  background-position: 63% 37%;
+  background-repeat: no-repeat;
   text-align: center;
 }
 .main-title{
@@ -147,6 +153,7 @@ ul {
 /*Стилизация кнопок навигации*/
 
 .button-main {
+  display: block;
   background-color: var(--accent-color);
   border-radius: 4px;
   border: 4px var(--accent-color);
@@ -182,7 +189,7 @@ ul {
   padding: 6px 22px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   font-size: 16px;
   line-height: 1.63;
   font-weight: 500;
@@ -190,9 +197,10 @@ ul {
 .button:hover,
 .button:focus {
   background-color: var(--accent-color);
-  box-shadow: 0px, 4px, rgba(0, 0, 0, 0.15);
   color: var(--white-text);
   cursor: pointer;
+  box-shadow: 4px, 4px, 4px, 4px, rgba(0, 0, 0, 0.25);
+}
 }
 .btn-portfolio-list:last-child{
   margin-right: 0;
@@ -204,6 +212,7 @@ ul {
   margin-right: 0;
 }
 .current-button {
+  display: block;
   background-color: var(--accent-color);
   box-shadow: 0px, 4px, rgba(0, 0, 0, 0.15);
   color: var(--white-text);
@@ -224,6 +233,41 @@ ul {
 }
 .advantages-list{
   display: flex;
+}
+/*добавление фоновых картинок через псевдоелементы
+.advantages-list .item::before{
+content: "";
+display: block;
+margin-bottom: 30px;
+height: 120px;
+background-color: var(--background-color-lignt-blue);
+background-size: 70px 70px ;
+background-repeat: no-repeat;
+background-position: center;
+border-radius: 4px;
+}
+.advantages-list .item:nth-child(1)::before{
+  background-image: url(../imeges/attention.svg);
+}
+.advantages-list .item:nth-child(2)::before{
+  background-image: url(../imeges/punctuality.svg);
+}
+.advantages-list .item:nth-child(3)::before{
+  background-image: url(../imeges/planning.svg);
+}
+.advantages-list .item:nth-child(4)::before{
+  background-image: url(../imeges/technology.svg);
+}*/
+.bkg-icon-advantages{
+  display: flex;
+  background-color: var(--background-color-lignt-blue);
+  border-radius: 4px;
+  padding-top: 25px;
+  padding-right: 100px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  margin-bottom: 30px;
+
 }
 .advantages-list .item{
   width: 270;
@@ -291,6 +335,7 @@ margin-right: 30px;
 }
 .card-name-teem{
   background-color: var(--conteiner-background);
+  border-radius: 4px;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -308,7 +353,90 @@ margin-right: 30px;
   line-height: 1.17;
   color: var(--text-color-light-grey);
 }
-/*селектор тега*/
+/*иконки соц сетей*/
+.list-social-icons{
+  display: flex;
+  margin-top: 16px;
+  margin-right: 32px;
+  margin-left: 32px;
+  align-items: center;
+  justify-content: center;
+}
+.social-link-item{
+  width: 44px;
+  height: 44px;
+  
+  border-radius: 50%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+.list-social-icons :not(:last-child){
+  margin-right: 10px;
+}
+.social-icon{
+  /*fill:currentColor;*/
+  fill: var(--social-icons-grey);
+}
+.social-link-item:hover .social-icon,
+.social-link-item:focus .social-icon{
+  fill: var(--white-text);
+  background-color: var(--accent-color);
+}
+.social-link-item:hover,
+.social-link-item:focus{
+  background-color: var(--accent-color);
+}
+/*cекция наши клиенты*/
+.section-our-clients{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.title-our-clients{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  color: var(--text-color-dark-grey);
+  text-align: center;
+  margin-bottom: 50px;
+}
+.list-icon-client{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.item-icon-client{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: 1px solid;
+  border-color: var(--social-icons-grey);
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+}
+.list-icon-client :not(:last-child){
+  margin-right: 30px;
+}
+.icon-client{
+  fill: var(--social-icons-grey);
+}
+.item-icon-client:hover .icon-client{
+  fill:var(--accent-color);
+}
+.item-icon-client:hover,
+.item-icon-client:focus{
+  border-color:var(--accent-color);
+  cursor: pointer;
+}
+/*
+.icon-client:hover,
+.icon-client:focus{
+  fill: currentColor;
+}*/
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -349,6 +477,12 @@ margin-left: -30px;
   margin-top: 30px;
   margin-left: 30px;
 }
+.projects-list .item:hover{
+  /*border: 3px solid yellowgreen;*/
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
 .card-description{
   outline: 1px solid #EEEEEE;
   padding-top: 20px;
