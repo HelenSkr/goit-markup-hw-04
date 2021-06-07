@@ -104,6 +104,19 @@ ul {
 .contacts-header .item-contacts:last-child{
   margin-right: 0px;
 }
+.item-contacts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.icon-contacts{
+  margin-right: 10px;
+  fill: currentColor;
+}
+.icon-contacts:hover{
+fill: var(--accent-color)
+}
 .contacts .link {
   display: block;
   font-weight: 500;
@@ -115,6 +128,12 @@ ul {
 .contacts .link:focus {
   color: var(--accent-color);
 }
+.contacts .link:hover .icon-contacts,
+.contacts .link:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
 .address {
   font-style: normal;
 }
