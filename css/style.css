@@ -101,18 +101,24 @@ ul {
 .contacts-header .item-contacts{
   margin-right: 50px;
   align-items: center;
-  align-content: center;
 }
 .contacts-header .item-contacts:last-child{
   margin-right: 0px;
 }
+.item-contacts .link{
+  display: flex;
+  align-items: center;  
+}
+
+/*
 .item-contacts{
   display: flex;
   align-items: center;
-  align-content: center;
-  text-align: center;
-}
+
+}*/
 .icon-contacts{
+  display: flex;
+  align-items: center;
   margin-right: 10px;
   fill: currentColor;
 }
@@ -120,7 +126,6 @@ ul {
 fill: var(--accent-color)
 }
 .contacts .link {
-  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
@@ -205,6 +210,7 @@ fill: var(--accent-color)
   margin-bottom: 34px;
 }
 .button {
+  display: inline-block;
   background-color: var(--background-color-lignt-blue);
   border-radius: 4px;
   border: 4px var(--background-color-lignt-blue);
@@ -212,7 +218,6 @@ fill: var(--accent-color)
   padding: 6px 22px;
   text-align: center;
   text-decoration: none;
-  display: block;
   font-size: 16px;
   line-height: 1.63;
   font-weight: 500;
@@ -222,7 +227,7 @@ fill: var(--accent-color)
   background-color: var(--accent-color);
   color: var(--white-text);
   cursor: pointer;
-  box-shadow: 0px, 4px, 4px, 0px, rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%), 0px 2px 2px rgb(0 0 0 / 12%);
 }
 .btn-portfolio-list:last-child{
   margin-right: 0;
@@ -234,9 +239,10 @@ fill: var(--accent-color)
   margin-right: 0;
 }
 .current-button {
-  display: block;
+  display: inline-block;
   background-color: var(--accent-color);
-  box-shadow: 0px, 4px, 4px, 0px, rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%), 0px 2px 2px rgb(0 0 0 / 12%);
+  /*box-shadow: 0px, 4px, 4px, 0px, rgba(0, 0, 0, 0.25);*/
   color: var(--white-text);
   cursor: pointer;
   border-radius: 4px;
@@ -382,11 +388,11 @@ margin-right: 30px;
   align-items: center;
   justify-content: center;
 }
-.social-link-item{
+.social-link{
+  display: flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  display: flex;
   justify-content: center; 
   align-items: center;
 }
@@ -405,6 +411,7 @@ margin-right: 30px;
 .social-link-item:hover,
 .social-link-item:focus{
   background-color: var(--accent-color);
+  border-radius: 50%;
 }
 .social-icon:hover,
 .social-icon:focus{
@@ -425,20 +432,22 @@ background-color: var(--accent-color);
 }
 .list-icon-client{
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.item-icon-client{
+  display: flex;
+  width: 170px;
+  height: 92px; 
+  border: 1px solid;
+  border-color: var(--social-icons-grey);
+  border-radius: 4px;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
-.item-icon-client{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  border: 1px solid;
-  border-color: var(--social-icons-grey);
-  border-radius: 4px;
-  width: 170px;
-  height: 92px;
+.link-icon-client{
+  max-width: 100%;
 }
 .list-icon-client :not(:last-child){
   margin-right: 30px;
@@ -459,10 +468,8 @@ background-color: var(--accent-color);
 /*футер*/
 .footer .container{
   display: flex;
-
 }
 .footer {
-  height: 252px;
   padding-top: 60px;
   padding-bottom: 60px;
   margin-left: auto;
@@ -483,6 +490,7 @@ background-color: var(--accent-color);
 }
 .footer-logo-contacts{
   margin-right: 70px;
+  align-items: center;
 }
 /*футер иконки соцсетей*/
 .title-footer-social-icons{
@@ -502,7 +510,8 @@ line-height: 1.17;
   align-items: center;
   justify-content: center;
 }
-.footer-social-link-item{
+
+.footer-social-link{
   background-color: rgb(255, 255, 255,0.1);
   width: 44px;
   height: 44px;
@@ -511,19 +520,20 @@ line-height: 1.17;
   justify-content: center; 
   align-items: center;
 }
+
 .footer-list-social-icons :not(:last-child){
   margin-right: 10px;
 }
 .footer-social-icon{
   fill: var(--white-text);
 }
-.footer-social-link-item:hover .footer-social-icon,
-.footer-social-link-item:focus .footer-social-icon{
+.footer-social-link:hover .footer-social-icon,
+.footer-social-link:focus .footer-social-icon{
   fill: var(--white-text);
   background-color: var(--accent-color);
 }
-.footer-social-link-item:hover,
-.footer-social-link-item:focus{
+.footer-social-link:hover,
+.footer-social-link:focus{
   background-color: var(--accent-color);
 }
 
