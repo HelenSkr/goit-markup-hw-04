@@ -561,7 +561,10 @@ margin-left: -30px;
   margin-top: 30px;
   margin-left: 30px;
 }
-.projects-list .item:hover{
+.projects-list .link{
+  display: block;
+}
+.projects-list .link:hover{
   /*border: 3px solid yellowgreen;*/
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
