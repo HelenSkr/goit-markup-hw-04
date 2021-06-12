@@ -123,7 +123,8 @@ ul {
   margin-right: 10px;
   fill: currentColor;
 }
-.icon-contacts:hover{
+.icon-contacts:hover
+.icon-contacts:focus,{
 fill: var(--accent-color)
 }
 .contacts .link {
@@ -137,7 +138,7 @@ fill: var(--accent-color)
   color: var(--accent-color);
 }
 .contacts .link:hover .icon-contacts,
-.contacts .link:focus {
+.contacts .link:focus .icon-contacts{
   color: var(--accent-color);
   fill: var(--accent-color);
 }
