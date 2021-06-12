@@ -123,8 +123,8 @@ ul {
   margin-right: 10px;
   fill: currentColor;
 }
-.icon-contacts:hover
-.icon-contacts:focus,{
+.icon-contacts:hover,
+.icon-contacts:focus{
 fill: var(--accent-color)
 }
 .contacts .link {
@@ -134,7 +134,7 @@ fill: var(--accent-color)
   color: var(--text-color-light-grey);
 }
 .contacts .link:hover,
-.contacts .link:focus {
+.contacts .link:focus{
   color: var(--accent-color);
 }
 .contacts .link:hover .icon-contacts,
@@ -405,20 +405,17 @@ margin-right: 30px;
   /*fill:currentColor;*/
   fill: var(--social-icons-grey);
 }
-.social-link-item:hover .social-icon,
-.social-link-item:focus .social-icon{
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon{
   fill: var(--white-text);
   background-color: var(--accent-color);
 }
-.social-link-item:hover,
-.social-link-item:focus{
+.social-link:hover,
+.social-link:focus{
   background-color: var(--accent-color);
-  border-radius: 50%;
 }
-.social-icon:hover,
-.social-icon:focus{
-background-color: var(--accent-color);
-}
+
 /*cекция наши клиенты*/
 .section-our-clients{
   padding-top: 94px;
@@ -466,6 +463,15 @@ background-color: var(--accent-color);
 .item-icon-client:focus{
   border-color:var(--accent-color);
   cursor: pointer;
+}
+.link-icon-client:hover .icon-client,
+.link-icon-client:focus .icon-client{
+  fill:var(--accent-color);
+  background-color: var(--conteiner-background);
+  border-color: var(--social-icons-grey);
+}
+.link-icon:focus .item-icon-client{
+  border-color: var(--social-icons-grey);
 }
 /*футер*/
 .footer .container{
