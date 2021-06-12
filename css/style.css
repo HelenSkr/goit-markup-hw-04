@@ -63,6 +63,10 @@ ul {
 .logo-part {
   color: var(--accent-color);
 }
+.header-nav .logo{
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
 .link {
   color: inherit;
   text-decoration: none;
@@ -289,12 +293,12 @@ border-radius: 4px;
 }*/
 .bkg-icon-advantages{
   display: flex;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
   background-color: var(--background-color-lignt-blue);
   border-radius: 4px;
-  padding-top: 25px;
-  padding-right: 100px;
-  padding-bottom: 25px;
-  padding-left: 100px;
   margin-bottom: 30px;
 }
 .advantages-list .item{
@@ -364,8 +368,7 @@ margin-right: 30px;
 .card-name-teem{
   background-color: var(--conteiner-background);
   border-radius: 4px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px;
 }
 .about-name {
   text-align: center;
@@ -385,8 +388,6 @@ margin-right: 30px;
 .list-social-icons{
   display: flex;
   margin-top: 16px;
-  margin-right: 32px;
-  margin-left: 32px;
   align-items: center;
   justify-content: center;
 }
@@ -468,6 +469,7 @@ margin-right: 30px;
 /*футер*/
 .footer .container{
   display: flex;
+  align-items: baseline;
 }
 .footer {
   padding-top: 60px;
@@ -500,7 +502,6 @@ letter-spacing: 1px;
 line-height: 1.17;
 }
 .footer-social-icons{
-  padding-top: 12px;
   justify-content: center; 
   align-items: center;
 }
@@ -595,4 +596,6 @@ margin-left: -30px;
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
   }
