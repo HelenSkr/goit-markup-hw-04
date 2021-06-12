@@ -434,7 +434,7 @@ margin-right: 30px;
   margin-left: auto;
   margin-right: auto;
 }
-.item-icon-client{
+.link-icon-client{
   display: flex;
   width: 170px;
   height: 92px; 
@@ -454,13 +454,8 @@ margin-right: 30px;
 .icon-client{
   fill: var(--social-icons-grey);
 }
-.item-icon-client:hover .icon-client,
-.item-icon-client:focus .icon-client{
-  fill:var(--accent-color);
-  background-color: var(--conteiner-background);
-}
-.item-icon-client:hover,
-.item-icon-client:focus{
+.link-icon-client:hover,
+.link-icon-client:focus{
   border-color:var(--accent-color);
   cursor: pointer;
 }
@@ -468,9 +463,6 @@ margin-right: 30px;
 .link-icon-client:focus .icon-client{
   fill:var(--accent-color);
   background-color: var(--conteiner-background);
-  border-color: var(--social-icons-grey);
-}
-.link-icon:focus .item-icon-client{
   border-color: var(--social-icons-grey);
 }
 /*футер*/
